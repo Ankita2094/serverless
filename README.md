@@ -1,4 +1,9 @@
 # serverless
+
+Publish Subscribe system with SNS and lambda function. When the user add/update/delete a qestion or a file or an answer a message is published to the SNS topic,
+the lambda function checks the entry of the email in DynamoDB if it has no entry then it inserts a record with a TTL of 15 minutes and sends the notification to the user with SES
+
+
 Repository for lambda function
 
 TechStack :
